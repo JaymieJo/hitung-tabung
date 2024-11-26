@@ -13,4 +13,4 @@ if st.button("Hitung Volume", type="primary"):
     loading.progress(i+1)
   
   v = math.pi*(r**2)*t
-  st.success(f'Volume tabung adalah {v}:.2f')
+  st.success(f'Volume tabung adalah {v:.2f}')
