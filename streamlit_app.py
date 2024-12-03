@@ -24,6 +24,9 @@ with st.sidebar:
     # Urutkan berdasarkan
     urutan = st.selectbox("Urutkan Berdasarkan", ["Harga (Terendah ke Tertinggi)", "Harga (Tertinggi ke Terendah)", "Nama (A-Z)", "Nama (Z-A)"])
 
+# Muat data baju
+data = pd.read_csv("baju.csv")
+
 # Filter data berdasarkan kategori, rentang harga, ukuran, dan warna
 if kategori != "Semua":
     data = data[data["Kategori"] == kategori]
@@ -47,12 +50,5 @@ elif urutan == "Nama (Z-A)":
 # Tampilkan data baju
 st.table(data)
 
-# Masukkan gambar dari file lokal
-gambar = st.file_uploader("Pilih Gambar", type=["png", "jpg", "jpeg"])
-
-# Jika gambar telah dipilih, tampilkan di halaman
-if gambar is not None:
-    st.image(gambar, width=300)
-    st.write("Gambar telah diunggah.")
-else:
-    st.write("Silakan unggah gambar.")
+# Tampilkan keterangan
+st.write("Catatan: Anda dapat menggunakan filter dan pengurutan di sidebar untuk mempersempit hasil pencarian Anda.")
