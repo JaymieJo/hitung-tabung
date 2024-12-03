@@ -47,13 +47,5 @@ elif urutan == "Nama (A-Z)":
 elif urutan == "Nama (Z-A)":
     data = data.sort_values("Nama", ascending=False)
 
-# Keranjang belanja
-keranjang = []
-
 # Tampilkan data baju
 st.table(data)
-
-# Tampilkan keranjang belanja
-st.write("**Keranjang Belanja**")
-for item in keranjang:
-    st.write(f"- {item['Nama']} - {item['Harga']}")
