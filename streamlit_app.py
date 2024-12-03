@@ -1,5 +1,4 @@
 import streamlit as st
-import pandas as pd
 
 # Judul halaman
 st.title("Toko Baju Online")
