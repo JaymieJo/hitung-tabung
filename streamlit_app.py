@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 
 # Judul halaman
 st.title("Toko Baju Online")
@@ -48,3 +49,15 @@ elif urutan == "Nama (Z-A)":
 
 # Tampilkan data baju
 st.table(data)
+
+import streamlit as st
+
+# Masukkan gambar dari file lokal
+gambar = st.file_uploader("Pilih Gambar", type=["png", "jpg", "jpeg"])
+
+# Jika gambar telah dipilih, tampilkan di halaman
+if gambar is not None:
+    st.image(gambar, width=300)
+    st.write("Gambar telah diunggah.")
+else:
+    st.write("Silakan unggah gambar.")
