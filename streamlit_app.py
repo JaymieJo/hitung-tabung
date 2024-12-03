@@ -50,8 +50,6 @@ elif urutan == "Nama (Z-A)":
 # Tampilkan data baju
 st.table(data)
 
-import streamlit as st
-
 # Masukkan gambar dari file lokal
 gambar = st.file_uploader("Pilih Gambar", type=["png", "jpg", "jpeg"])
 
