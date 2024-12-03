@@ -24,9 +24,6 @@ with st.sidebar:
     # Urutkan berdasarkan
     urutan = st.selectbox("Urutkan Berdasarkan", ["Harga (Terendah ke Tertinggi)", "Harga (Tertinggi ke Terendah)", "Nama (A-Z)", "Nama (Z-A)"])
 
-# Muat data baju
-data = pd.read_csv("baju.csv")
-
 # Filter data berdasarkan kategori, rentang harga, ukuran, dan warna
 if kategori != "Semua":
     data = data[data["Kategori"] == kategori]
